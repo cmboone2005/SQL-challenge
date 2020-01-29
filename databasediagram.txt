@@ -1,0 +1,41 @@
+Employees
+-
+emp_no INTEGER PK
+birth_date DATE
+first_name VARCHAR
+last_name VARCHAR
+gender VARCHAR
+hire_date DATE
+
+Departments
+-
+dept_no VARCHAR PK
+dept_name VARCHAR
+
+Department_Employees
+-
+emp_no INTEGER PK FK - Employees.emp_no
+dept_no VARCHAR PK FK - Departments.dept_no
+from_date DATE
+to_date DATE
+
+Titles
+-
+emp_no INTEGER PK FK - Employees.emp_no
+title VARCHAR 
+from_date DATE
+to_date DATE
+
+Department_Managers
+-
+dept_no VARCHAR PK FK - Departments.dept_no
+emp_no INTEGER PK FK - Employees.emp_no
+from_date DATE
+to_date DATE
+
+Salaries
+-
+emp_no INTEGER PK FK - Employees.emp_no
+salary INTEGER
+from_date DATE
+to_date DATE
